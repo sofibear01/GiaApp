@@ -49,7 +49,7 @@ const Ficha = ({ datosGata, onEditar }) => {
 };
 
 Ficha.propTypes = {
-    datosGata: PropTypes.array.isRequired,
+    datosGata: PropTypes.object.isRequired,
     onEditar: PropTypes.func.isRequired,
 };
 

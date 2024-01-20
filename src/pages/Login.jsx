@@ -2,7 +2,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-const Login = () => {
+const Login = ({ onLogin }) => {
 
     const [ email, setEmail ] = useState('');
     const [ password, setPassword ] = useState('');
@@ -22,11 +22,11 @@ const Login = () => {
             //Guardar la sesión del usuario
             window.sessionStorage.setItem('usuario', email);
 
-            navigate('/admin');
+            onLogin();
 
         }else{
             alert('Email o Password incorrectos');
-            navigate('*')
+            
         }
 
         limpiarDatos();

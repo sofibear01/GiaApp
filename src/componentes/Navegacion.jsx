@@ -26,10 +26,7 @@ function Navegacion() {
                                 <Link to='/imagenes' className="nav-link" >Imagenes</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to='/misDatos' className="nav-link" >Mis datos</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to='/login' className="nav-link" >Login</Link>
+                                <Link to='/' className="nav-link" >Mis datos</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to='/usuarios' className="nav-link" >Usuarios</Link>
