@@ -1,0 +1,13 @@
+.boton-borrarTodo {
+    margin-right: 20px;
+}
+
+.btn-borrar-completas {
+    background-color: rgba(26, 97, 39, 0.795) !important;
+    border-color: rgba(26, 97, 39, 0.795) !important;
+}
+
+.contenedor-principal {
+    position: relative;
+    min-height: 100vh;
+  }

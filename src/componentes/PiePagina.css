@@ -1,0 +1,7 @@
+.pie-pagina {
+    background-color: #feceb9f3;
+    width: 100%;
+    height: 2.5rem;
+    position: relative;
+    z-index: 1; /* Asegura que el pie de página esté sobre el contenido */
+}

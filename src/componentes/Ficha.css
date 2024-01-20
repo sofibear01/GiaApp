@@ -1,0 +1,27 @@
+.imagen-chica {
+    width: 200px;
+    height: auto;
+    margin-right: 10px; /* Ajusta el margen derecho según tus preferencias */
+}
+
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+}
+
+.titulo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Añade este estilo para centrar horizontalmente */
+    height: 100%; 
+    width: 100%;
+}
+
+#card-principal{
+    background-color: antiquewhite !important;
+    align-items: center;
+    max-width: 700px;
+    display: flex;
+}

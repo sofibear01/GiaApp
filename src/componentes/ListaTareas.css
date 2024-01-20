@@ -1,0 +1,25 @@
+.table-container {
+    padding: 2rem;
+    max-width: 70%;
+    margin-left: auto; /* Esto desplazará el contenido a la derecha */
+    margin-right: auto;
+}
+
+.tarea-completada {
+  text-decoration: line-through;
+}
+
+.boton-borrar {
+  background-color: transparent;
+  border: none;
+}
+
+.bin-icon {
+  display: inline-block;
+  width: 40px; 
+  height: 40px;
+  background-image: url('../assets/bin.png');
+  background-size: cover;
+  cursor: pointer;
+}
+
