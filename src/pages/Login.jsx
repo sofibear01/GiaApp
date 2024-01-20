@@ -1,34 +1,30 @@
+import { useState } from 'react';
+import PropTypes from 'prop-types';
+import catIcon from '../assets/cat.png';
 
-import { Link, useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+
 
 const Login = ({ onLogin }) => {
 
-    const [ email, setEmail ] = useState('');
-    const [ password, setPassword ] = useState('');
-    const navigate = useNavigate();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
-    const login = () =>{
+    const login = () => {
 
-        if(email == '' || password == ''){
+        if (email == '' || password == '') {
             alert('Debe ingresar un email y un password');
             limpiarDatos();
             return;
         }
 
-        if(email == 'sofibearzotti@gmail.com' && password == 'gia2407'){
+        if (email == 'sofibearzotti@gmail.com' && password == 'gia2407') {
             alert('Bienvenida sofia!!!');
-
-            //Guardar la sesión del usuario
             window.sessionStorage.setItem('usuario', email);
-
             onLogin();
 
-        }else{
+        } else {
             alert('Email o Password incorrectos');
-            
         }
-
         limpiarDatos();
 
     }
@@ -38,53 +34,56 @@ const Login = ({ onLogin }) => {
         setPassword('');
     }
 
-
     return (
-
         <>
-            <h1 className="text-center mt-5 mb-5">
-                Form de Login Admin
-            </h1>
-
+            <div className="text-center mt-5 mb-5">
+                <img 
+                src={ catIcon } 
+                alt="icono-cat" 
+                className="icono-cat" 
+                style={{ width: '80px', height: '80px' }}/>
+                <h1 className="d-inline-block ml-2">Gia App</h1>
+            </div>
+            <h3 className="text-center mt-5 mb-5">
+                Iniciar sesion
+            </h3>
             <div className="container">
                 <form id="formLogin">
                     <div className="mb-3">
                         <label className="form-label">Email </label>
-                        <input 
-                            type="email" 
-                            className="form-control" 
-                            /* id="nombre" */ 
-                            value = { email }
+                        <input
+                            type="email"
+                            className="form-control"
+                            /* id="nombre" */
+                            value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            required 
+                            required
                         />
                     </div>
                     <div className="mb-3">
                         <label className="form-label">Password </label>
-                        <input 
-                            type="password" 
-                            className="form-control"  
-                            value = { password }
+                        <input
+                            type="password"
+                            className="form-control"
+                            value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            required 
+                            required
                         />
                     </div>
                     <div className="mb-3 text-center">
-                        <button onClick={ login } type="button" className="btn btn-success w-50">Login</button>
+                        <button onClick={login} type="button" className="btn btn-success w-50">Login</button>
                     </div>
                     <div className="mb-3 text-center">
-                        <button onClick={ limpiarDatos } className="btn btn-danger w-75">Reset</button>
+                        <button onClick={limpiarDatos} className="btn btn-danger w-50">Reset</button>
                     </div>
                 </form>
             </div>
-
-            <Link to="/">
-                <h2 className="text-center mt-5 mb-5">
-                    Ir a la Página Principal
-                </h2>
-            </Link>
-
         </>
     )
 }
+
+Login.propTypes = {
+    onLogin: PropTypes.func.isRequired,
+};
+
 export default Login;

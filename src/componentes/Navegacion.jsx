@@ -3,8 +3,14 @@ import { Link } from 'react-router-dom';
 import Cerrar from './Cerrar';
 import cat from '../assets/cat.png';
 import './Navegacion.css'
+import PropTypes from 'prop-types';
 
-function Navegacion() {
+
+function Navegacion( { onLogout } ) {
+    const cerrarSesion = () => {
+        window.sessionStorage.removeItem('usuario');
+        onLogout();
+      };
 
     return (
         <>
@@ -33,10 +39,8 @@ function Navegacion() {
                             </li>
                         </ul>
 
+                        <Cerrar onLogout={cerrarSesion}/>
 
-                        <Cerrar />
-
-                        
                     </div>
                 </div>
             </nav>
@@ -45,4 +49,7 @@ function Navegacion() {
     )
 }
 
+Navegacion.propTypes = {
+    onLogout: PropTypes.func.isRequired,
+};
 export default Navegacion;

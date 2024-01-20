@@ -12,22 +12,26 @@ import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 
 
 function App() {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [currentPage, setCurrentPage] = useState('login');
 
   const handleLogin = () => {
     setIsLoggedIn(true);
-    setCurrentPage('MisDatos'); // Puedes establecer la página que deseas mostrar después de iniciar sesión
+     
   };
+  
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+  };
+
 
   return (
     <div id="app-container" className="d-flex flex-column min-vh-100">
-      {isLoggedIn && <Navegacion />}
+      {isLoggedIn && <Navegacion onLogout={handleLogout} />}
       <div id="content-wrap" className="flex-grow-1">
         <Routes>
           <Route
@@ -40,8 +44,18 @@ function App() {
               )
             }
           />
-          <Route path="/imagenes" element={<Imagenes />} />
-          <Route path="/tareas" element={<Tareas />} />
+          <Route
+            path="/imagenes"
+            element={isLoggedIn ? <Imagenes /> : <Navigate to="/" />}
+          />
+          <Route
+            path="/tareas"
+            element={isLoggedIn ? <Tareas /> : <Navigate to="/" />}
+          />
+          <Route 
+            path="/login" 
+            element={isLoggedIn ? <Navigate to="/" /> : <Login onLogin={handleLogin} />}
+          />
         </Routes>
       </div>
       {isLoggedIn && <PiePagina />}
