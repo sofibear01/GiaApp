@@ -35,7 +35,7 @@ function Navegacion( { onLogout } ) {
                                 <Link to='/' className="nav-link" >Mis datos</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to='/usuarios' className="nav-link" >Usuarios</Link>
+                                <Link to='/catInfo' className="nav-link" >Mas gatitos</Link>
                             </li>
                         </ul>
 

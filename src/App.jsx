@@ -13,6 +13,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 
 import { Routes, Route, Navigate } from 'react-router-dom'
+import CatInfo from './pages/CatInfo'
 
 
 function App() {
@@ -51,6 +52,10 @@ function App() {
           <Route
             path="/tareas"
             element={isLoggedIn ? <Tareas /> : <Navigate to="/" />}
+          />
+          <Route
+            path="/catInfo"
+            element={isLoggedIn ? <CatInfo /> : <Navigate to="/" />}
           />
           <Route 
             path="/login" 

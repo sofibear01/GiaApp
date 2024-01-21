@@ -1,16 +1,24 @@
 #root {
-  /* max-width: 1280px; */
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   text-align: center;
+  background-color: #FFE9C8;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #FFE9C8;
+}
+
+#app-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Hace que #app-container ocupe todo el alto disponible */
 }
 
 #content-wrap {
-  padding-bottom: 2.5rem;   
+  flex-grow: 1;
+  padding: 20px; /* Agrega un espacio interno opcional */
 }
+
 
 body, html, #root {
   height: 100%;

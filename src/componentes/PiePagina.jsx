@@ -52,7 +52,7 @@ const PiePagina = () => {
                 </div>
 
                 <div className="mx-auto">
-                    <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
+                    <h6 className='text-uppercase fw-bold mb-4'>Contacto</h6>
                     <p>
                         <MDBIcon icon="home" className="me-2" />
                         Cordoba, Capital
