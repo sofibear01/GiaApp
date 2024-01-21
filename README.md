@@ -1,13 +1,17 @@
-<<<<<<< HEAD
 # React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 =======
 # GiaApp
-Proyecto realizado para curso fullstack - UTN BS.AS
->>>>>>> 397c72a3c89fd5da7f933e0e7db372729b025339
+Proyecto realizado para curso fullstack - UTN BS.AS. El propósito de esta aplicación es poder tener en un lugar los datos de mi gata registrados, con las tareas que tengo que hacer para no olvidarme de ellas. Tambien tiene una pestaña para ver datos sobre otros gatos a modo de entretenimiento.
+
+## Características
+
+- **Mis Datos:** Página para gestionar la información de mi gata, incluyendo nombre, meses, peso, nacimiento, género y teléfono.
+
+- **Imágenes:** Muestra imágenes sobre mi gata es lugares especificos, mostrando que está haciendo.
+
+- **CatInfo:** Muestra imágenes aleatorioas y algunos datos sobre otros gatos obtenidas de la [API The Cat API](https://thecatapi.com/).
+
+- **Tareas:** Página para gestionar las tareas relacionadas con mi gata, me permite anotar tareas, completarlas y eliminarlas.
+
+- **Login:** Inicia sesión para acceder a las funciones y gestionar la información de la mascota.
+

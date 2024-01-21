@@ -11,12 +11,13 @@
 #app-container {
   display: flex;
   flex-direction: column;
-  flex: 1; /* Hace que #app-container ocupe todo el alto disponible */
+  flex: 1; 
 }
 
 #content-wrap {
   flex-grow: 1;
-  padding: 20px; /* Agrega un espacio interno opcional */
+  padding: 20px;
+  background-color: #FFE9C8;
 }
 
 
