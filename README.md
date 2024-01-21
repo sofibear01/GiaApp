@@ -15,3 +15,11 @@ Proyecto realizado para curso fullstack - UTN BS.AS. El propósito de esta aplic
 
 - **Login:** Inicia sesión para acceder a las funciones y gestionar la información de la mascota.
 
+
+## Paleta de Colores
+
+- **Color Principal:** `#FFE9C8`
+- **Color Pie de pagina:** `#feceb9f3` 
+- **Color de Fondo:** `#FFE9C8;`
+- **Color en card:** antiquewhite
+- **Color en botones:** rgba(26, 97, 39, 0.795), rgba(26, 97, 39, 0.795)
